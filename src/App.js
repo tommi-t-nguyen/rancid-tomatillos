@@ -10,8 +10,10 @@ class App extends Component {
       movies: []
     }
   }
+  componentDidMount = () =>{
+    this.setState({movies:movieData.movies})
+    }
 
-  
   render() {
     return(
       <main className='App'>
