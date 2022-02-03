@@ -10,8 +10,8 @@ class App extends Component {
       movies: []
     }
   }
-  
 
+  
   render() {
     return(
       <main className='App'>
