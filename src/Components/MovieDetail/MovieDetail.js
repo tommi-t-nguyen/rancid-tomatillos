@@ -3,16 +3,16 @@ import { fetchSingleMovie } from '../../apiCalls.js';
 
 
 class MovieDetail extends Component {
-  constructor() {
+  constructor({ id }) {
     super();
     this.state = {
-      detail: {}
+      detail: {},
+      id: id
     }
-
   }
 
   componentDidMount(){
-    fetchSingleMovie(694919)
+    fetchSingleMovie(this.state.id)
     .then(data => this.setState({detail: data.movie}))
   }
   
@@ -22,7 +22,6 @@ class MovieDetail extends Component {
     <>
       <img src={this.state.detail.backdrop_path} alt='poster'width="90%"/>
       <p>{this.state.detail.title}</p>
-
     </>
     )
   }
