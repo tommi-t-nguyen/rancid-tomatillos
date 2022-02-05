@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import movieData from './movieData.js';
-import Movies from './Movies.js';
+import Movies from './Components/Movies/Movies.js';
+import MovieDetail from './Components/MovieDetail/MovieDetail.js'
 
 class App extends Component {
   constructor() {
@@ -31,7 +32,7 @@ class App extends Component {
     if (this.state.view === 'movie') {
       return (
         <main className="App">
-          <p>something else</p>
+          <MovieDetail />
           <button onClick={() => this.switchView('home')}>clickme</button>
         </main>
       )
