@@ -321,6 +321,7 @@ const movieData = {
       "release_date": "2020-03-12"
     }
   ]
+  
 };
 
 export default movieData;
