@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import movieData from './movieData.js';
 import Movies from './Components/Movies/Movies.js';
-import MovieDetail from './Components/MovieDetail/MovieDetail.js'
+import MovieDetail from './Components/MovieDetail/MovieDetail.js';
+import { fetchAllMovies } from './apiCalls.js';
 
 class App extends Component {
   constructor() {
@@ -13,8 +13,10 @@ class App extends Component {
     }
   }
   componentDidMount(){
-    this.setState({movies:movieData.movies})
+    fetchAllMovies()
+    .then(data => this.setState({movies: data.movies}))
   }
+
   switchView = (views) => {
     this.setState({view:views})
   }
