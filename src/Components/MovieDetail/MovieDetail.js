@@ -7,22 +7,25 @@ class MovieDetail extends Component {
     super();
     this.state = {
       detail: {},
-      id: id
+      id: id,
+      error:false
     }
   }
 
   componentDidMount(){
     fetchSingleMovie(this.state.id)
     .then(data => this.setState({detail: data.movie}))
+    .catch((error) => this.setState({error: true}))
   }
-  
-  
+
+
   render() {
     return (
-    <>
-      <img src={this.state.detail.backdrop_path} alt='poster'width="90%"/>
-      <p>{this.state.detail.title}</p>
-    </>
+<>
+    {this.state.error && <h1>Sorry we're having techincal difficulty. Please try again later.</h1>}
+    {!this.state.error && <><img src={this.state.detail.backdrop_path} alt='poster'width="90%"/>
+  <p>{this.state.detail.title}</p></>}
+</>
     )
   }
 }

@@ -17,6 +17,7 @@ class App extends Component {
   componentDidMount(){
     fetchAllMovies()
     .then(data => this.setState({movies: data.movies}))
+    .catch((error) => this.setState({view: 'error'}))
   }
 
   switchView = (id, views) => {
@@ -28,12 +29,14 @@ class App extends Component {
       return (
         <main className="App">
           <h1>Rotten Tomatillos</h1>
+          {this.state.view === 'error' && <h1>Sorry we're having techincal difficulty. Please try again later.</h1>}
           {this.state.view === 'home' && <Movies movies={this.state.movies} switchView={this.switchView}/>}
-          {this.state.view === 'movie' && 
+          {this.state.view === 'movie' &&
           <div>
-            <MovieDetail id={this.state.currentMovieId}/> 
+            <MovieDetail id={this.state.currentMovieId}/>
             <button onClick={() => this.switchView(null, 'home')}>clickme</button>
           </div>}
+
         </main>
       )
     // }
