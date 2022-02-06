@@ -1,7 +1,7 @@
 const urlPath = 'https://rancid-tomatillos.herokuapp.com/api/v2';
 
 export const fetchAllMovies = () => {
-  return fetch(`${urlPath}/movies`)
+  return fetch(`${urlPath}/movies/`)
   .then(response => response.json());
 };
 
