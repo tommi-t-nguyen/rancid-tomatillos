@@ -1,0 +1,41 @@
+.movie-details-container {
+  /* display: flex; */
+  background-color: black;
+  border: 3px hotpink solid;
+  color: white;
+    width: 100vw;
+}
+
+.movie-img {
+  width: 50%;
+  border: 3px red solid;
+}
+
+.title{
+ font-size: 4em;
+ border: 2px solid white;
+}
+
+.release-date {
+ border: 2px solid red;
+}
+
+.overview {
+ border: 2px solid yellow;
+}
+
+.genre {
+ border: 2px solid orange;
+}
+
+.runtime {
+ border: 2px solid green ;
+}
+
+.tagline {
+ border: 2px solid blueviolet;
+}
+
+.rating {
+ border: 2px solid blue;
+}

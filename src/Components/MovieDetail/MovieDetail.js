@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchSingleMovie } from '../../apiCalls.js';
+import './MovieDetail.css'
 
 
 class MovieDetail extends Component {
@@ -21,11 +22,19 @@ class MovieDetail extends Component {
 
   render() {
     return (
-<>
-    {this.state.error && <h1>Sorry we're having techincal difficulty. Please try again later.</h1>}
-    {!this.state.error && <><img src={this.state.detail.backdrop_path} alt='poster'width="90%"/>
-  <p>{this.state.detail.title}</p></>}
-</>
+      <div className='movie-details-container'>
+          {this.state.error && <h1>Sorry we're having techincal difficulty. Please try again later.</h1>}
+          {!this.state.error && <><img className='movie-img' src={this.state.detail.backdrop_path} alt='movie poster'/>
+          <p className='title'>{this.state.detail.title}</p>
+          <p className='release-date'>Release Date: {this.state.detail.release_date}</p>
+          <p className='overview'>Overview: {this.state.detail.overview}</p>
+          <p className='rating'>Rating: {this.state.detail.average_rating}</p>
+          <p className='genre'>Genre: {this.state.detail.genres}</p>
+          <p className='runtime'>Runtime: {this.state.detail.runtime}</p>
+          <p className='tagline'>{this.state.detail.tagline}</p>
+          </>}
+      </div>
+
     )
   }
 }
