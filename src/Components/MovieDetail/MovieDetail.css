@@ -1,4 +1,40 @@
-.movie-details-container {
+
+.movie-details{
+  display: flex;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.left-details {
+  padding: 20px;
+  height: 60%;
+  width: 50%;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-img {
+  height: 300px;
+  width: 300px;
+}
+
+.details-bottom-left{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.right-details{
+  border: 2px hotpink solid;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  width: 50%;
+}
+
+
+/* .movie-details-container {
   display: flex;
   background-color: black;
   border: 3px hotpink solid;
@@ -51,9 +87,9 @@
   border: 2px solid blueviolet;
   margin-top: -2%;
   font-size: 1.25em;
-  margin-right: -55%;
+  margin-right: -5npm 5%;
 }
 
 .rating {
  border: 2px solid blue;
-}
+} */
