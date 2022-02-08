@@ -1,5 +1,5 @@
 
-.movie-details{
+.movie-details {
   display: flex;
   height: 100vh;
   background-color: black;
@@ -8,88 +8,59 @@
 
 .left-details {
   padding: 20px;
-  height: 60%;
-  width: 50%;
-  border: 2px solid red;
+  height: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
 }
 
 .movie-img {
-  height: 300px;
-  width: 300px;
+  border: 1px solid darkgray;
+  box-shadow: 10px 10px red;
+  /* border-radius: 15px 50px 30px 5px; */
 }
 
-.details-bottom-left{
+.details-bottom-left {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 2.5%;
+  padding: 10px;
+}
+
+.release-date,
+.runtime,
+.rating {
+  box-shadow: 5px 5px red;
+  border: .5px solid darkgray;
+  /* border-radius: 15px 50px 30px 5px; */
+  font-size: 1.5em;
 }
 
 .right-details{
-  border: 2px hotpink solid;
   display: flex;
   flex-direction: column;
-  height: 60%;
-  width: 50%;
-}
-
-
-/* .movie-details-container {
-  display: flex;
-  background-color: black;
-  border: 3px hotpink solid;
-  color: white;
-  width: 100vw;
-}
-
-.movie-details {
-  border: 10px solid darkorchid;
-  display: flex;
-  flex-direction: column;
-  align-items: center
- }
-
-.movie-img {
-    width: 47%;
-    margin-top: 1%;
-    margin-left: -44%;
+  height: 100%;
+  width: 35%;
+  padding: 20px;
 }
 
 .title {
- font-size: 4em;
- border: 2px solid white;
- font-style: italic;
- margin-right: -55%;
- margin-top: -26%;
-}
-
-.release-date {
- border: 2px solid red;
-}
-
-.overview {
-  border: 2px solid yellow;
-  width: 30%;
-  font-size: 1em;
+  font-size: 5em;
   font-style: italic;
-  margin-right: -56%;
+  box-shadow: 5px 5px red;
+  border: .5px solid darkgray;
+  margin-top: 4px;
+  /* border-radius: 15px 50px 30px 5px; */
 }
 
-.genre {
- border: 2px solid orange;
-}
+.tagline{
+  font-size: 1.5em;
+  font-style: italic;
+ }
 
-.runtime {
- border: 2px solid green ;
-}
+ .overview {
+   padding: 3%;
+ }
+  
+/* ADDS effect ==> :hover */
 
-.tagline {
-  border: 2px solid blueviolet;
-  margin-top: -2%;
-  font-size: 1.25em;
-  margin-right: -5npm 5%;
-}
-
-.rating {
- border: 2px solid blue;
-} */

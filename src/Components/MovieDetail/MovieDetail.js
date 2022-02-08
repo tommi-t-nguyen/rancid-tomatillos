@@ -26,18 +26,18 @@ class MovieDetail extends Component {
           {this.state.error && <h1>Sorry we're having techincal difficulty. Please try again later.</h1>}
           {!this.state.error && <div className='movie-details'>
           <div className='left-details'>
-          <img className='movie-img' src={this.state.detail.backdrop_path} alt='movie poster'/>
+          <img className='movie-img' src={this.state.detail.backdrop_path} alt={'movie poster'}/>
         <div className='details-bottom-left'>
-          <p className='rating'>Rating: {this.state.detail.average_rating}</p>
-          <p className='runtime'>Runtime: {this.state.detail.runtime}</p>
+          <p className='rating'>Rating: {this.state.detail.average_rating} ⭐️</p>
+          <p className='runtime'>Runtime: {this.state.detail.runtime} minutes</p>
           <p className='release-date'>Release Date: {this.state.detail.release_date}</p>
         </div>
         </div>
         <div className='right-details'>
           <h1 className='title'>{this.state.detail.title}</h1>
           <p className='tagline'>{this.state.detail.tagline}</p>
-          <p className='overview'>Overview: {this.state.detail.overview}</p>
-          <p className='genre'>Genre: {this.state.detail.genres}</p>
+          <h2 className='overview'>{this.state.detail.overview}</h2>
+          {/* <p className='genre'>Genre: {this.state.detail.genres}</p> */}
         </div>
         </div>
           }
