@@ -38,6 +38,7 @@ class MovieDetail extends Component {
           <p className='tagline'>{this.state.detail.tagline}</p>
           <h2 className='overview'>{this.state.detail.overview}</h2>
           {/* <p className='genre'>Genre: {this.state.detail.genres}</p> */}
+          <button className='return-btn'>Return Home</button>
         </div>
         </div>
           }

@@ -17,14 +17,12 @@
 .movie-img {
   border: 1px solid darkgray;
   box-shadow: 10px 10px red;
-  /* border-radius: 15px 50px 30px 5px; */
 }
 
 .details-bottom-left {
   display: flex;
   justify-content: space-evenly;
   margin-top: 2.5%;
-  /* padding: 10px; */
 }
 
 .release-date,
@@ -32,7 +30,6 @@
 .rating {
   box-shadow: 5px 5px red;
   border: .5px solid darkgray;
-  /* border-radius: 15px 50px 30px 5px; */
   font-size: 1.5em;
 }
 
@@ -50,7 +47,6 @@
   box-shadow: 5px 5px red;
   border: .5px solid darkgray;
   margin-top: 4px;
-  /* border-radius: 15px 50px 30px 5px; */
 }
 
 .tagline{
@@ -61,6 +57,15 @@
  .overview {
    padding: 3%;
  }
+
+ .return-btn {
+   box-shadow: 5px 5px red;
+   border: .5px solid darkgray;
+   width: 25%;
+   text-align: center;
+   margin-left: 40%;
+   margin-top: 2%;
+   cursor: pointer;
+ }
   
-/* ADDS effect ==> :hover */
 
