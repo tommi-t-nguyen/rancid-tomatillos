@@ -3,7 +3,7 @@ import './App.css';
 import Movies from './Components/Movies/Movies.js';
 import MovieDetail from './Components/MovieDetail/MovieDetail.js';
 import { fetchAllMovies } from './apiCalls.js';
-import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -43,6 +43,11 @@ class App extends Component {
                 </div>}
               </>}
           />
+        <Route
+          path="/movies/:id"
+          render={({match}) =>
+            <MovieDetail id={match.params.id}/>
+          }/>
         </main>
       )
   }
