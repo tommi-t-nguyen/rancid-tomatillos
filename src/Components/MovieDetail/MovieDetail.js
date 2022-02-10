@@ -38,7 +38,7 @@ class MovieDetail extends Component {
           <h1 className='title'>{this.state.detail.title}</h1>
           <p className='tagline'>{this.state.detail.tagline}</p>
           <h2 className='overview'>{this.state.detail.overview}</h2>
-          <Link className='home-view-btn' to="/">Return Home</Link>
+          <Link className='home-view-btn' to="/">Home ↩</Link>
         </div>
         </div>
           }
