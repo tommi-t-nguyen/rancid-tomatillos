@@ -9,7 +9,7 @@ const Card = ({id, poster_path, title, switchView}) => {
       <NavLink to={`/movies/${id}`}>
       <img src={poster_path} alt="movie poster" width="70%" height="70%"/>
       </NavLink>
-      <button onClick={() => switchView(id, 'movie')}>clickme</button>
+      {/* <button onClick={() => switchView(id, 'movie')}>clickme</button> */}
     </div>
   )
 }
