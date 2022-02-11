@@ -5,3 +5,8 @@
   align-items: center;
   padding: 10px;
 }
+
+.movie-poster-img {
+  width: 70%;
+  height: 70%;
+}

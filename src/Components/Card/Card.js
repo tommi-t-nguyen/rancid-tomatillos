@@ -1,11 +1,14 @@
 import React from 'react';
 import './Card.css';
+import { NavLink } from 'react-router-dom';
 
 const Card = ({id, poster_path, title, switchView}) => {
   return (
     <div className='card' id={id}>
-      <img src={poster_path} alt="movie poster" width="70%" height="70%"/>
-      <button onClick={() => switchView(id, 'movie')}>clickme</button>
+      <h3>{title}</h3>
+      <NavLink to={`/movies/${id}`}>
+      <img className='movie-poster-img' src={poster_path} alt='movie poster'/>
+      </NavLink>
     </div>
   )
 }
