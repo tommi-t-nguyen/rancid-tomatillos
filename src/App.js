@@ -11,19 +11,22 @@ class App extends Component {
     super();
     this.state = {
       movies: [],
-      view:'home',
+      view:'loading',
       currentMovieId: null,
       error: ''
     }
   }
   componentDidMount(){
     fetchAllMovies()
-    .then(data => this.setState({movies: data.movies}))
+    .then(data => this.setState({movies: data.movies, view: 'home'}))
     .catch((error) => this.setState({view: 'error'}))
   }
   switchView = (id, views) => {
     this.setState({currentMovieId:id, view:views})
   }
+  getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
 
 
   render() {
@@ -31,9 +34,10 @@ class App extends Component {
         <main className="App">
           <Nav />
           {this.state.view === 'error' && <h1>Sorry we're having techincal difficulty. Please try again later.</h1>}
+          {this.state.view === 'loading' && <h1>loading</h1>}
           {this.state.view === 'home' &&
           <div>
-            <Hero movie={this.state.movies} switchView={this.switchView}/>
+            <Hero movie={this.state.movies[this.getRandomIndex(this.state.movies)]} switchView={this.switchView}/>
             <Movies movies={this.state.movies} switchView={this.switchView}/>
           </div>}
           {this.state.view === 'movie' &&

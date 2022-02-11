@@ -7,13 +7,13 @@ const Hero = ({movie, switchView}) => {
       className="banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage:`url('${movie[6].backdrop_path}')`,
+        backgroundImage:`url('${movie.backdrop_path}')`,
         backgroundPosition: "center center",
     }}
     >
       <div className="banner-contents">
-        <h1 className="banner-title">{movie[6].title}</h1>
-        <button className="banner-button" onClick={() => switchView(`${movie[6].id}`, 'movie')}>Watch Trailer</button>
+        <h1 className="banner-title">{movie.title}</h1>
+        <button className="banner-button" onClick={() => switchView(`${movie.id}`, 'movie')}>Watch Trailer</button>
       </div>
     </div>
   )
