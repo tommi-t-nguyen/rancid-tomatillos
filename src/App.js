@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Nav from './Components/Nav/Nav.js';
+import Hero from './Components/Hero/Hero.js';
 import Movies from './Components/Movies/Movies.js';
 import MovieDetail from './Components/MovieDetail/MovieDetail.js';
 import { fetchAllMovies } from './apiCalls.js';
@@ -10,7 +12,7 @@ class App extends Component {
     super();
     this.state = {
       movies: [],
-      view:'home',
+      view:'loading',
       currentMovieId: null,
       error: ''
     }
@@ -18,13 +20,16 @@ class App extends Component {
 
   componentDidMount() {
     fetchAllMovies()
-    .then(data => this.setState({movies: data.movies}))
-    .catch((error) => this.setState({view: 'error'}));
+    .then(data => this.setState({movies: data.movies, view: 'home'}))
+    .catch((error) => this.setState({view: 'error'}))
   }
-
   switchView = (id, views) => {
     this.setState({currentMovieId:id, view:views})
   }
+  getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
 
   render() {
       return (
