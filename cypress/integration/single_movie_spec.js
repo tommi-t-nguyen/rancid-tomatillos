@@ -1,21 +1,15 @@
-it('should have a sample test', () => {
-    expect(true).to.equal(true)
-  });
 
-
-beforeEach(() => {
-    cy.visit('http://localhost:3000');
-  });
-  describe('Testing, testing, testing', () => {
-  it('checks to see if correct home link is visited', () => {
-    expect(true).to.equal(true)
+  describe('Single Movie Details User Flows', () => {
+  beforeEach(() => {
+     cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies/340102', {fixture: 'details.json'})
+     .visit('http://localhost:3000/movies/340102');
   })
-})
 
-  // describe('It should have the details for a single movie', () => {
-  //  beforeEach(() => {
-  //       cy.visit('http://localhost:3000')
-  //   })
-  // })
 
-  //NEED TO IMPORT: DETAILS json
+  it('should be able to visit the url for a single movie', () => {
+    cy.url()
+    .should('eq', 'http://localhost:3000/movies/340102')
+  });
+  
+  
+});
