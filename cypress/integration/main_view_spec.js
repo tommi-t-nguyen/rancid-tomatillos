@@ -6,12 +6,12 @@ describe('Main View User Flows', () => {
 
   it('should be able to visit the url', () => {
     cy.url()
-    .should('eq', 'http://localhost:3000/')
+    .should('eq', 'http://localhost:3000/');
   });
   
   it('should be able to see a header', () => {
     cy.get('h1')
-    .contains('Rotten Tomatillos')
+    .contains('Rotten Tomatillos');
   })
 });
 
