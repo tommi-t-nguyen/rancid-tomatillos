@@ -17,3 +17,8 @@ beforeEach(() => {
   //       cy.visit('http://localhost:3000')
   //   })
   // })
+
+
+    //NEED TO IMPORT: MOVIES json
+
+ 

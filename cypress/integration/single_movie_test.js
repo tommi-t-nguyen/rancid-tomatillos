@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-expressions */
 it('should have a sample test', () => {
     expect(true).to.equal(true)
   });
+
 
 beforeEach(() => {
     cy.visit('http://localhost:3000');
@@ -12,9 +12,10 @@ beforeEach(() => {
   })
 })
 
+  // describe('It should have the details for a single movie', () => {
+  //  beforeEach(() => {
+  //       cy.visit('http://localhost:3000')
+  //   })
+  // })
 
-// describe('It should have the details for a single movie', () => {
-//    beforeEach(() => {
-//         cy.visit('http://localhost:3000')
-//     })
-//   })
+  //NEED TO IMPORT: DETAILS json
