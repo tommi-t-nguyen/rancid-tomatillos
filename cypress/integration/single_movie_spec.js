@@ -3,9 +3,9 @@
   beforeEach(() => {
      cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies/340102', {fixture: 'details.json'})
      .visit('http://localhost:3000/movies/340102');
-  })
+  });
 
-  it('should be able to visit the url for a single movie and corrent movie details be returned', () => {
+  it('should be able to visit the url for a single movie and correct movie details be returned', () => {
     cy.url()
     .should('eq', 'http://localhost:3000/movies/340102');
   });
@@ -28,11 +28,9 @@
     .should('be.visible');
   });
 
-  //IS THIS ONE DONE CORRECTLY?
-  it('should see an image backdrop for each single moview viewed', () => {
-    cy.get('.movie-img');
-     cy.url()
-    .should('eq','http://localhost:3000/movies/340102');
+  it('should see an image backdrop for each single movies viewed', () => {
+    cy.get('.movie-img')
+    .should('be.visible');
   });
   
   it('should see a starred rating for each movie viewed', () => {
@@ -53,28 +51,14 @@
     .should('be.visible');
   });
 
-  it('should be able to click the return home text box with the arrow icon to be returned to the main page', () => { 
-    cy.get('.return-home')
-    .contains('Home ↩')
-    .should('be.visible')
-    .click();
-    });
-    
-  //DO I need to have these two bottom tests?
-  it('should see all details for image, rating, runtime, and release date on left side of a single movie details view', () => {
-    cy.get('.left-details')
-    // .contains();
-  });
-
-  it('should see all details for title, tagline, and overview on right side of a single movie details card', () => {
-    cy.get('.right-details')
-    // .contains()
-  });
-
-
-//Think still need these: 
-  //test for click intercept ??
-  //status code
-  //working or an error
-
+  //NOTE: depending on how error handling gets set up, this test should be altered to include error message above or maybe split if an error component changes it
+  // it('should be able to click the return home text box with the arrow icon to be returned to the main page', () => { 
+  //   cy.get('.return-home')
+  //   .contains('Home ↩')
+  //   .should('be.visible')
+  //   .click()
+  //   .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {fixture: 'movies.json'})
+  //   .url()
+  //   .should('eq', 'http://localhost:3000/');
+  //   });
 });
