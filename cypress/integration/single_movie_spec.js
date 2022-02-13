@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
   describe('Single Movie Details User Flows', () => {
   beforeEach(() => {
@@ -52,13 +53,13 @@
   });
 
   //NOTE: depending on how error handling gets set up, this test should be altered to include error message above or maybe split if an error component changes it
-  // it('should be able to click the return home text box with the arrow icon to be returned to the main page', () => { 
-  //   cy.get('.return-home')
-  //   .contains('Home ↩')
-  //   .should('be.visible')
-  //   .click()
-  //   .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {fixture: 'movies.json'})
-  //   .url()
-  //   .should('eq', 'http://localhost:3000/');
-  //   });
+  it('should be able to click the return home text box with the arrow icon to be returned to the main page', () => { 
+    cy.get('.return-home')
+    .contains('Home ↩')
+    .should('be.visible')
+    .click()
+    .intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {fixture: 'movies.json'})
+    .url()
+    .should('eq', 'http://localhost:3000/');
+    });
 });
