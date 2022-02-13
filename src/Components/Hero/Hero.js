@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Hero.css";
+import { NavLink } from 'react-router-dom';
 
 const Hero = ({movie, switchView}) => {
   return (
@@ -13,8 +14,12 @@ const Hero = ({movie, switchView}) => {
     >
       <div className="banner-contents">
         <h1 className="banner-title">{movie.title}</h1>
-        <button className="banner-button" onClick={() => switchView(`${movie.id}`, 'movie')}>Watch Trailer</button>
+        <NavLink to={`/movies/${movie.id}`}>
+        <button className="banner-button">Watch Trailer</button>
+        </NavLink>
+
       </div>
+        <div className="fade"/>
     </div>
   )
 }
