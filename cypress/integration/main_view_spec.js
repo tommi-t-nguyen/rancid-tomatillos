@@ -18,6 +18,7 @@ describe('Main View User Flows', () => {
 
   it('should display movie poster options on home page', () => {
     cy.get('.movies-container')
+    .get('.card')
     .should('be.visible');
   });
 
