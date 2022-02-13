@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { fetchSingleMovie } from '../../apiCalls.js';
 import './MovieDetail.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 class MovieDetail extends Component {
@@ -38,7 +38,7 @@ class MovieDetail extends Component {
           <h1 className='title'>{this.state.detail.title}</h1>
           <p className='tagline'>{this.state.detail.tagline}</p>
           <h2 className='overview'>{this.state.detail.overview}</h2>
-          <Link className='return-home' to="/">Home ↩</Link>
+          <NavLink className='return-home' to="/">Home ↩</NavLink>
         </div>
         </div>
           }
