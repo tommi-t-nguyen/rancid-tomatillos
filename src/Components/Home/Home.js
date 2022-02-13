@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../Nav/Nav.js';
 import Hero from '../Hero/Hero.js';
 import Movies from '../Movies/Movies.js';
+import Loading from '../Loading/Loading.js';
 import { fetchAllMovies } from '../../apiCalls.js';
 
 
@@ -34,7 +35,7 @@ render() {
       <div className="Home">
         <Nav />
         {this.state.view === 'error' && <h1>Sorry we're having techincal difficulty. Please try again later.</h1>}
-        {this.state.view === 'loading' && <h1> loading</h1>}
+        {this.state.view === 'loading' && <div className="loader"><Loading/></div>}
         {this.state.view === 'home' &&
         <>
         <Hero movie={this.state.movies[this.getRandomIndex(this.state.movies)]}/>
