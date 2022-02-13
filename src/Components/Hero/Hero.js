@@ -17,7 +17,9 @@ const Hero = ({movie, switchView}) => {
         <NavLink to={`/movies/${movie.id}`}>
         <button className="banner-button">Watch Trailer</button>
         </NavLink>
+
       </div>
+        <div className="fade"/>
     </div>
   )
 }

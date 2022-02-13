@@ -8,4 +8,12 @@
 .movie-poster-img {
   width: 100%;
   height: 90%;
+  border-radius: 1vh;
+}
+.grow {
+transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+transform: scale(1.1);
 }
