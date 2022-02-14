@@ -11,7 +11,7 @@ describe('Main View User Flows', () => {
   });
   
   it('should be able to see a header', () => {
-    cy.get('h1')
+    cy.get('.nav')
     .contains('Rotten Tomatillos')
     .should('be.visible');
   });
