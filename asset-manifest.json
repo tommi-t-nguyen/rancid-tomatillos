@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/rancid-tomatillos/static/css/main.985ad1c5.css",
-    "main.js": "/rancid-tomatillos/static/js/main.b6e88aba.js",
-    "static/js/787.55352625.chunk.js": "/rancid-tomatillos/static/js/787.55352625.chunk.js",
-    "index.html": "/rancid-tomatillos/index.html",
-    "main.985ad1c5.css.map": "/rancid-tomatillos/static/css/main.985ad1c5.css.map",
-    "main.b6e88aba.js.map": "/rancid-tomatillos/static/js/main.b6e88aba.js.map",
-    "787.55352625.chunk.js.map": "/rancid-tomatillos/static/js/787.55352625.chunk.js.map"
+    "main.css": "/static/css/main.985ad1c5.css",
+    "main.js": "/static/js/main.8a694b0c.js",
+    "static/js/787.55352625.chunk.js": "/static/js/787.55352625.chunk.js",
+    "index.html": "/index.html",
+    "main.985ad1c5.css.map": "/static/css/main.985ad1c5.css.map",
+    "main.8a694b0c.js.map": "/static/js/main.8a694b0c.js.map",
+    "787.55352625.chunk.js.map": "/static/js/787.55352625.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.985ad1c5.css",
-    "static/js/main.b6e88aba.js"
+    "static/js/main.8a694b0c.js"
   ]
 }
