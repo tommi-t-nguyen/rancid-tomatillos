@@ -2,6 +2,7 @@ import React from 'react';
 import './Movies.css';
 import Card from '../Card/Card.js';
 
+
 const Movies = ( {movies, switchView} ) => {
     const movieCards = movies.map(movie => {
       return (
