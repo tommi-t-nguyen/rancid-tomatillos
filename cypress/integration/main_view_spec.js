@@ -10,15 +10,26 @@ describe('Main View User Flows', () => {
     .should('eq', 'http://localhost:3000/');
   });
   
-  it('should be able to see a header', () => {
+  it('should be able to see a nav with the app title', () => {
     cy.get('.nav')
     .contains('Rotten Tomatillos')
     .should('be.visible');
   });
 
+  it('should be able to see contents in in the banner at top of screen', () => {
+    cy.get('.banner-contents')
+    .get('.banner-title')
+    .should('be.visible')
+  });
+
   it('should display movie poster options on home page', () => {
     cy.get('.movies-container')
     .get('.card')
+    .should('be.visible');
+  });
+
+  it('should be able to click the movie trailer button and be taken to the movie details page', () => {
+    cy.get('.banner-button')
     .should('be.visible');
   });
 
