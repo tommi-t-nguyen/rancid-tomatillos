@@ -10,6 +10,8 @@ describe('Error Flow', () => {
 
   it('should show an error if a 404 error occurs', () => {
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {statusCode: 404})
-    cy.visit('http://localhost:3000/');
+    // cy.visit('http://localhost:3000/');
+    cy.contains('Sorry we\'re having techincal difficulty. Please try again later.');
+
   })
 })
