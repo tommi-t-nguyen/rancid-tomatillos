@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { fetchSingleMovie } from '../../apiCalls.js';
 import './MovieDetail.css';
+import Error from '../Error/Error.js';
+import Loading from '../Loading/Loading.js';
 import { NavLink } from 'react-router-dom';
 
 
@@ -10,22 +12,23 @@ class MovieDetail extends Component {
     this.state = {
       detail: {},
       id: id,
-      error:false
+      view:'loading'
     }
   }
 
   componentDidMount(){
     fetchSingleMovie(this.state.id)
-    .then(data => this.setState({detail: data.movie}))
-    .catch((error) => this.setState({error: true}));
+    .then(data => this.setState({detail: data.movie, view: 'movie'}))
+    .catch((error) => this.setState({view: 'error'}));
   }
 
 
   render() {
     return (
       <div className='movie-details-container'>
-          {this.state.error && <h1>Sorry we're having techincal difficulty. Please try again later.</h1>}
-          {!this.state.error && <div className='movie-details'>
+          {this.state.view === 'error' && <Error />}
+          {this.state.view === 'loading' && <div className="loader"><Loading/></div>}
+          {this.state.view === 'movie' && <div className='movie-details'>
           <div className='left-details'>
           <img className='movie-img' src={this.state.detail.backdrop_path} alt={'movie poster'}/>
         <div className='details-bottom-left'>
@@ -41,6 +44,7 @@ class MovieDetail extends Component {
           <NavLink className='return-home' to="/">Home ↩</NavLink>
         </div>
         </div>
+
           }
       </div>
     )

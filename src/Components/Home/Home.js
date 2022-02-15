@@ -15,7 +15,6 @@ class Home extends Component {
       movies: [],
       view:'loading',
       currentMovieId: null,
-      error: ''
     }
   }
 
