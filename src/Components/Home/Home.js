@@ -21,6 +21,12 @@ class Home extends Component {
 
   componentDidMount() {
     fetchAllMovies()
+    .then(response => {
+      if(!response.ok){
+        this.setState({view:'error'});
+      }else{
+        return response.json()
+    }})
     .then(data => this.setState({movies: data.movies, view: 'home'}))
     .catch((error) => this.setState({view: 'error'}))
   }

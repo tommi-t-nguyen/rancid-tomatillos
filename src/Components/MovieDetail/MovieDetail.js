@@ -18,6 +18,12 @@ class MovieDetail extends Component {
 
   componentDidMount(){
     fetchSingleMovie(this.state.id)
+    .then(response => {
+      if(!response.ok){
+        this.setState({view:'error'});
+      }else{
+        return response.json()
+    }})
     .then(data => this.setState({detail: data.movie, view: 'movie'}))
     .catch((error) => this.setState({view: 'error'}));
   }
