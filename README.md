@@ -1,4 +1,4 @@
-## 🍿 Rotten Tomatillos 🎬
+## 🍿 Rancid Tomatillos 🎬
 
 ### A Front End Engineering Project by
 
@@ -10,12 +10,21 @@
 
 ### Project Overview 
 
-   With the Rotten Tomatillos application, a user can check out various movies and learn more about individual titles. Upon visiting the main page, the user is able to select a movie by clicking on the poster card and be taken to a movie details page. The user is then able to return home to view another movie in the collection. 
+   With the Rancid Tomatillos application, a user can check out various movies and learn more about individual titles. Upon visiting the main page, the user is able to select a movie by clicking on the poster card and be taken to a movie details page. The user is then able to return home to view another movie in the collection. 
 
+### Deployment Link
+
+- [Rotten Tomatillos](https://rancid-tomatillos-woad.vercel.app/)
 ### Demonstration 
-INSERT GIF OR IMAGES HERE
+
+- Homepage
+<img width="1095" alt="Screen Shot 2022-02-14 at 8 27 00 PM" src="https://user-images.githubusercontent.com/54600612/153975142-17a64e0b-0c2c-4b2e-aa2f-420b636b49aa.png">
+
+- Selected Movie View
+<img width="1457" alt="Screen Shot 2022-02-14 at 8 23 41 PM" src="https://user-images.githubusercontent.com/54600612/153974857-5ded6091-50ba-4858-a92c-b8f5fddcb274.png">
 
 ### Techologies Used
+
 
 - React
 - JavaScript
@@ -38,8 +47,11 @@ INSERT GIF OR IMAGES HERE
 
 ### Future Enhancements
 
+
+- Add trailer's link
 - Search bar capability for movie titles
 - A way to favorite movies 
+- Login
 
 ### Resources
 
