@@ -4,6 +4,7 @@ import Hero from '../Hero/Hero.js';
 import Movies from '../Movies/Movies.js';
 import Loading from '../Loading/Loading.js';
 import Error from '../Error/Error.js';
+import Footer from '../Footer/Footer.js';
 import { fetchAllMovies } from '../../apiCalls.js';
 
 
@@ -39,7 +40,8 @@ render() {
         {this.state.view === 'home' &&
         <>
         <Hero movie={this.state.movies[this.getRandomIndex(this.state.movies)]}/>
-        <Movies movies={this.state.movies} switchView={this.switchView}/>
+        <Movies movies={this.state.movies}/>
+        <Footer />
         </>}
       </div>
     )

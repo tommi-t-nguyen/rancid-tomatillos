@@ -33,7 +33,7 @@ class Nav extends Component {
         style={{
          backgroundColor: this.state.status === "top" ? "" : "black"
          }}>
-        <h3 className="nav-logo">Rotten Tomatillos</h3>
+        <h3 className="nav-logo">Rancid Tomatillos</h3>
       </div>
     )
   }
