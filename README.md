@@ -14,7 +14,7 @@
 
 ### Deployment Link
 
-- [Rotten Tomatillos](https://rancid-tomatillos-woad.vercel.app/)
+- [Rancid Tomatillos](https://rancid-tomatillos-woad.vercel.app/)
 ### Demonstration 
 
 - Homepage
